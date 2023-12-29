@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import Notes from './components/Notes'
-import Create from './components/Create'
+import Notes from './pages/Notes'
+import Create from './pages/Create'
 
 function App() {
   return (
