@@ -1,5 +1,15 @@
+import { Typography } from "@mui/material";
+
 export default function Create() {
   return (
-    <h2>Create page</h2>
+    <>
+      <Typography
+        variant="h6"
+        component="h2"
+        color="textSecondary"
+        gutterBottom>
+        Create A New Note
+      </Typography>
+    </>
   )
 }
