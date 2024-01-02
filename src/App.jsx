@@ -3,22 +3,9 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
 import { ThemeProvider, createTheme } from '@mui/material'
-import { purple } from '@mui/material/colors'
+import { dark } from '@mui/material/styles/createPalette'
 
 const theme = createTheme({
-  palette : {
-    primary : {
-      main : "#333",
-    },
-    secondary : purple
-  },
-  typography : {
-    fontFamily : "Quicksand",
-    fontWeightLight : "400",
-    fontWeightRegular : '500',
-    fontWeightMedium : '600',
-    fontWeightBold : '700'
-  }
 })
 
 function App() {
