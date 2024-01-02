@@ -1,34 +1,37 @@
-import SendIcon from '@mui/icons-material/Send';
-import AcUnitOutlinedIcon from '@mui/icons-material/AcUnitOutlined';
 import { Container } from '@mui/material';
 import { Button } from '@mui/material';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { Typography } from '@mui/material';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+const styles = {
+  btn : {
+    backgroundColor : 'red',
+    '&:hover' : {
+      backgroundColor : 'purple'
+    }
+  },
+  title : {
+    textDecoration : 'underline'
+  }
+}
 
 export default function Create() {
+
   return (
     <Container>
-      <AcUnitOutlinedIcon />
-      <AcUnitOutlinedIcon color='primary'/>
-      <AcUnitOutlinedIcon color='secondary' fontSize='large'/>
-      <AcUnitOutlinedIcon color='action' fontSize='small'/>
-      <AcUnitOutlinedIcon color='error'/>
-      <AcUnitOutlinedIcon color='disabled'/>
-
-      <br></br>
-
+      <Typography
+        sx={styles.title}
+        variant='h5'
+        component='h2'
+        gutterBottom>
+        Create a New Note
+      </Typography>
       <Button
-        type='submit'
+        sx={styles.btn}
         color='secondary'
         variant='contained'
-        endIcon={<SendIcon />}>
+        endIcon={<KeyboardArrowRightIcon />}>
         Submit
-      </Button>
-
-      <Button
-        variant='outlined'
-        color='primary'
-        startIcon={<DeleteOutlineIcon/>}>
-        Delete
       </Button>
     </Container>
   )
