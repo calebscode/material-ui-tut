@@ -1,8 +1,9 @@
-import { Container, TextField } from '@mui/material';
+import { Container, FormControl, FormControlLabel, FormLabel, RadioGroup, TextField } from '@mui/material';
 import { Button } from '@mui/material';
 import { Typography } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useState } from 'react';
+import { Radio } from '@mui/material';
 
 const classes = {
   field : {
@@ -18,6 +19,7 @@ export default function Create() {
   const [details, setDetails] = useState('')
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
+  const [category, setCategory] = useState('todos')
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -29,11 +31,13 @@ export default function Create() {
       const note = {
         title : title,
         details : details,
+        category : category,
         id : crypto.randomUUID()
       }
 
       setTitle('')
       setDetails('')
+      setCategory('todos')
       console.log(note)
     } else {
       console.log('failed to create new note')
@@ -67,6 +71,7 @@ export default function Create() {
           >
 
         </TextField>
+
         <TextField
           value={details}
           onChange={(e) => setDetails(e.target.value)}
@@ -81,6 +86,17 @@ export default function Create() {
           error={detailsError}
           >
         </TextField>
+
+        <FormControl sx={classes.field}>
+          <FormLabel>Note Category</FormLabel>
+            <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
+              <FormControlLabel value='todos' control={<Radio />} label='Todo'/>
+              <FormControlLabel value='reminders' control={<Radio />} label='Reminder'/>
+              <FormControlLabel value='work' control={<Radio />} label='Work'/>
+              <FormControlLabel value='money' control={<Radio />} label='Money'/>
+            </RadioGroup>
+        </FormControl>
+        
         <Button
           type='submit'
           color='primary'
@@ -88,6 +104,7 @@ export default function Create() {
           endIcon={<KeyboardArrowRightIcon />}>
           Submit
         </Button>
+
       </form>
 
     </Container>
