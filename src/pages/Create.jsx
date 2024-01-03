@@ -4,6 +4,7 @@ import { Typography } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useState } from 'react';
 import { Radio } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const classes = {
   field : {
@@ -20,6 +21,8 @@ export default function Create() {
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
   const [category, setCategory] = useState('todos')
+
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -39,6 +42,19 @@ export default function Create() {
       setDetails('')
       setCategory('todos')
       console.log(note)
+
+      // post it to the db
+      const url = 'http://localhost:3000/notes'
+      fetch(url, {
+        method : 'POST',
+        headers : {
+          'Content-type' : 'application/json'
+        },
+        body : JSON.stringify(note)
+      }).then(() => {
+        navigate('/')
+      })
+      
     } else {
       console.log('failed to create new note')
     }
