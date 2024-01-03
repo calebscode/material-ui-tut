@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Button, Typography, Container } from '@mui/material';
 import { Link } from "react-router-dom";
-
+import { Grid, Paper } from "@mui/material";
 
 export default function Notes() {
 
@@ -19,17 +19,15 @@ export default function Notes() {
 
   return (
     <Container>
-      <h2>Notes page</h2>
-      {notes.map((note) => (
-        <div className="note" key={note.id}>
-          <Typography variant='h5'>{note.title}</Typography>
-          <Typography variant='h6'>{note.category} category</Typography>
-          <Typography gutterBottom variant='body1'>{note.details}</Typography>
-        </div>
-      ))}
-        <Link to='/create'>
-          <Button>Add New Note</Button>
-        </Link>
+      <Grid container>
+        {notes.map(note => (
+          <Grid item key={note.id} xs={12} md={6} lg={4}>
+            <Paper>
+              { note.title }
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
     </Container>
   )
 }
