@@ -29,6 +29,30 @@
       "details": "new details!",
       "category": "money",
       "id": "e0b59872-c883-44f4-98f0-052338d38f9d"
+    },
+    {
+      "title": "I hope I snap to the top!",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      "category": "todos",
+      "id": "71a049f5-4614-4a6f-adf3-5aaf9f47178c"
+    },
+    {
+      "title": "Me too me too! I love masonry",
+      "details": "I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. I am a reminder note. ",
+      "category": "reminders",
+      "id": "1d9b82ff-6a32-49f2-ac51-c345df62f0b9"
+    },
+    {
+      "title": "work work work",
+      "details": "look at the cool avatar in this card! wow i love using material ui so much. lorem ipsum pee pee poo poo",
+      "category": "work",
+      "id": "ce2c2126-3b3f-4323-b690-f1a03f808461"
+    },
+    {
+      "title": "i need money please hire me",
+      "details": "i need money so badly please hire me if you are reading this i need money so badly please hire me if you are reading this i need money so badly please hire me if you are reading this ",
+      "category": "money",
+      "id": "72a16323-f99d-42b1-9a8e-b5487ff1eef9"
     }
   ]
 }
