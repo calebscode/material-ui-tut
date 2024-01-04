@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { FormatListBulleted } from '@mui/icons-material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { useNavigate } from 'react-router-dom';
+import { format } from 'date-fns'
 
 const drawerWidth = 240;
 
@@ -46,9 +47,19 @@ export default function Layout({ children }) {
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Notes
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{flexGrow:1}}
+            >
+            {format(new Date(), 'MMMM do Y')}
           </Typography>
+          <Typography
+            variant="h6"
+            >
+              Caleb
+            </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
