@@ -15,6 +15,7 @@ import { FormatListBulleted } from '@mui/icons-material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns'
+import { Avatar } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -60,6 +61,7 @@ export default function Layout({ children }) {
             >
               Caleb
             </Typography>
+            <Avatar sx={{ml:2}}>C</Avatar>
         </Toolbar>
       </AppBar>
       <Drawer
