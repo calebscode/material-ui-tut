@@ -67,7 +67,7 @@ export default function Create() {
         variant='h5'
         component='h2'
         gutterBottom>
-        Create Note
+        New Note
       </Typography>
 
       <form
@@ -80,7 +80,7 @@ export default function Create() {
           sx={classes.field}
           variant='outlined'
           color='secondary'
-          label='Note Title'
+          label='Title'
           required
           fullWidth
           error={titleError}
