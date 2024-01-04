@@ -3,6 +3,7 @@ import { Button, Typography, Container } from '@mui/material';
 import { Link } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
 import NoteCard from "../components/NoteCard";
+import Masonry from '@mui/lab/Masonry'
 
 export default function Notes() {
 
@@ -39,7 +40,7 @@ export default function Notes() {
 
   return (
     <Container>
-      <Grid container spacing={3}>
+      <Masonry columns={{xs:1, sm:1, md:2, lg:3}} spacing={2}>
         {notes.map(note => (
           <Grid item key={note.id} xs={12} md={6} lg={4}>
             <NoteCard note={note} handleDelete={handleDelete}>
@@ -47,7 +48,7 @@ export default function Notes() {
             </NoteCard>
           </Grid>
         ))}
-      </Grid>
+      </Masonry>
     </Container>
   )
 }

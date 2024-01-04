@@ -1,6 +1,6 @@
 import { DeleteOutline } from "@mui/icons-material";
 import { Avatar, Card, CardContent, CardHeader, IconButton, Typography } from "@mui/material";
-import { cyan, indigo, purple, red, teal } from "@mui/material/colors";
+import { cyan, indigo, lime, red } from "@mui/material/colors";
 
 export default function NoteCard({ note, handleDelete }) {
 
@@ -8,7 +8,7 @@ export default function NoteCard({ note, handleDelete }) {
     reminder : red[500],
     todo : cyan[500],
     work : indigo[500],
-    money : teal[500]
+    money : lime[500]
   }
 
   return (
